@@ -1,7 +1,10 @@
+import 'package:alquran_app/core/injector.dart';
 import 'package:alquran_app/features/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  await configureDependencies();
+
   runApp(const MyApp());
 }
 
