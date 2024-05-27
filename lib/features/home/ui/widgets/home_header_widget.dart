@@ -1,4 +1,4 @@
-import 'package:alquran_app/core/design_system/circular_avatar_widget.dart';
+import 'package:alquran_app/core/design_system/widgets/circular_avatar_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeHeaderWidget extends StatelessWidget {
