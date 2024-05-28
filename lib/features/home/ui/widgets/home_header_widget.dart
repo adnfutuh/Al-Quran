@@ -14,7 +14,7 @@ class HomeHeaderWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Assalamualaikum'),
-            Text('Selamat Datang, Ahmad Fatihin'),
+            Text('Selamat Datang, Rizki Adnan Futuh'),
           ],
         ),
       ],

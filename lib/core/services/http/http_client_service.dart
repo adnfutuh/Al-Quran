@@ -6,7 +6,6 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import '../../env/env.dart';
 import '../../exceptions/app_exceptions.dart';
 import '../logger/logger_service.dart';
-import 'internet_connection_service.dart';
 
 abstract class HttpClientService {
   Future<Response> get({

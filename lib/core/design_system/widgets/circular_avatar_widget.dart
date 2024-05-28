@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import '../themes/pallet.dart';
 
 class CircularAvatarWidget extends StatelessWidget {
   final double size;
 
   const CircularAvatarWidget({
-    Key? key,
+    super.key,
     required this.size,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class CircularAvatarWidget extends StatelessWidget {
       child: Icon(
         Icons.person,
         size: size * 0.8,
-        color: Colors.white,
+        color: Pallet.white,
       ), // Placeholder background color
     );
   }
