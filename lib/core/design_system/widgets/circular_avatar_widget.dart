@@ -17,7 +17,7 @@ class CircularAvatarWidget extends StatelessWidget {
       child: Icon(
         Icons.person,
         size: size * 0.8,
-        color: Pallet.white,
+        color: Pallet.grey,
       ), // Placeholder background color
     );
   }
