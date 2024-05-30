@@ -26,4 +26,8 @@ class SurahModel with _$SurahModel {
 
   factory SurahModel.fromJson(Map<String, dynamic> json) =>
       _$SurahModelFromJson(json);
+
+  get jumlahAyat => null;
+
+  get ayat => null;
 }

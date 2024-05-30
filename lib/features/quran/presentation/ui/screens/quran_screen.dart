@@ -26,7 +26,7 @@ class _QuranScreenState extends State<QuranScreen> {
       value: GetIt.I<QuranCubit>(),
       child: Column(
         children: [
-          Text("Ini Widget Quran"),
+          const Text("Ini Widget Quran"),
           BlocBuilder<QuranCubit, QuranState>(builder: (context, state) {
             log(state.runtimeType.toString());
             log(state.toString());
