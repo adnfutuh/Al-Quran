@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             const HomeHeaderWidget(),
-            PrayerTimeWidget(),
+            const PrayerTimeWidget(),
             SizedBox(height: Dimension.width10),
             Center(
               child: Text(
