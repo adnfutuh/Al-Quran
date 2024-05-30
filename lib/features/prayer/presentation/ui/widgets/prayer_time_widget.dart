@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:alquran_app/features/prayer/presentation/cubit/prayer_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,14 +24,23 @@ class _PrayerTimeWidgetState extends State<PrayerTimeWidget> {
   Widget build(BuildContext context) {
     return BlocProvider.value(
       value: GetIt.I<PrayerCubit>(),
-      child: const Column(
+      child: Column(
         children: [
-          Text(
+          const Text(
             'Dzuhur 11.57',
           ),
-          Text(
+          const Text(
             '10 menit lagi',
           ),
+          BlocBuilder<PrayerCubit, PrayerState>(
+              builder: (context, state) =>
+                  state.maybeWhen(success: (cityDetail) {
+                    return Text(
+                      'Lokasi: ${cityDetail.locality}',
+                    );
+                  }, orElse: () {
+                    return const Text("kosong");
+                  })),
         ],
       ),
     );
