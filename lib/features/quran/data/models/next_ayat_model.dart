@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part '../../presentation/cubit/data/models/next_ayat_model.freezed.dart';
-part '../../presentation/cubit/data/models/next_ayat_model.g.dart';
+part 'next_ayat_model.freezed.dart';
+part 'next_ayat_model.g.dart';
 
 @freezed
 class NextAyatModel with _$NextAyatModel {
