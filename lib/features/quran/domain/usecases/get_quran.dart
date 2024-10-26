@@ -15,3 +15,14 @@ class GetQuran {
     return await repository.getQuran(id: id);
   }
 }
+
+@lazySingleton
+class GetListQuran {
+  final QuranRepository repository;
+
+  GetListQuran(this.repository);
+
+  Future<Either<AppException, SurahModel>> call(String id) async {
+    return await repository.getQuran(id: id);
+  }
+}

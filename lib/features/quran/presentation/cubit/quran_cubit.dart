@@ -1,4 +1,5 @@
 import 'package:alquran_app/core/core.dart';
+import 'package:alquran_app/features/quran/data/models/list_surah_model.dart';
 import 'package:alquran_app/features/quran/data/models/surah_model.dart';
 import 'package:alquran_app/features/quran/domain/usecases/get_quran.dart';
 
@@ -22,6 +23,23 @@ class QuranCubit extends Cubit<QuranState> {
         emit(QuranState.error(error: error));
       },
       (result) => emit(QuranState.success(surahModel: result)),
+    );
+  }
+}
+
+@singleton
+class ListQuranCubit extends Cubit<ListQuranState> {
+  final GetListQuran getListQuran;
+  ListQuranCubit(this.getListQuran) : super(const ListQuranState.initial());
+
+  void getListQuranData(String id) async {
+    emit(const ListQuranState.loading());
+    final result = await getListQuran(id);
+    result.fold(
+      (error) {
+        emit(ListQuranState.error(error: error));
+      },
+      (result) => emit(ListQuranState.success(listSurahModel: result)),
     );
   }
 }
